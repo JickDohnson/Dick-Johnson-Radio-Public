@@ -10,7 +10,7 @@
   and send everything (mic included) out through a virtual audio cable.
 </p>
 
-<p align="center"><a href="https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest"><b>⬇ Download Dick Johnson Radio 1.0</b></a></p>
+<p align="center"><a href="https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest"><b>⬇ Download the latest version</b></a></p>
 
 ---
 
