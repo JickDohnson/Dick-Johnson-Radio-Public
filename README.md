@@ -52,12 +52,14 @@
 - **Album art** in the now-playing area
 - **Audio visualizer** in 5 styles (Bars, LED, Mirror, Wave, Mountain), with **your own picture** showing through the bars
 - **YouTube → MP3 downloader**: songs or whole playlists go into their own playlist with album art, and the downloader can update itself when YouTube changes
+- **YouTube clips**: grab just part of a video (e.g. 1:30 to 1:42, or press "now" while it plays) as a new sound
 
 ### On air
 - Sends sounds to **VB-Audio Virtual Cable** (or any output), optionally mirrored to your speakers
 - **Microphone** and **browser audio** mixed into the cable
-- **Mic effects**: noise gate, compressor, and voices (Radio, Telephone, Deep, Chipmunk, Robot)
+- **Mic effects**: noise gate, compressor, voices (Radio, Telephone, Deep, Chipmunk, Robot) and a bass / mid / treble **equalizer**
 - **Hold-to-talk / talk-over** button or hotkey: mic on, music ducked
+- **Game push-to-talk**: one click (or a hotkey) holds your game's talk key down for you, and again lets go. Any key or mouse button 4/5, and it can hold the key automatically while sounds play
 - **Auto-ducking**: music dips while you talk or a clip plays
 - **On-air loudness meter** with peak and clip warning
 - **Countdown to the vocals**: mark where the singing starts and get a countdown to talk over the intro (auto-estimated for downloaded songs)
