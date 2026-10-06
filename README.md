@@ -22,6 +22,9 @@
 - **List view with waveform previews** that fill in as a sound plays, or a **pad view** of big coloured buttons
 - **Search** (Ctrl+F) and **favourites** (★)
 - Per-sound volume, overlap on/off, **Even loudness** (every clip plays at about the same level)
+- **Clip effects**: speed (chipmunk / slow-mo), reverse and echo, saved per sound or for a single play
+- **Sound packs**: share sounds as a `.djrpack` file (names, colours, volumes, effects) and import them in one go
+- **Profiles**: separate sound sets, playlists, hotkeys and show settings, e.g. one per show
 - **Playlists** as tabs, with loop, shuffle, skip and their own hotkeys
 
 ### Music & media
@@ -46,14 +49,18 @@
 - **Station IDs** every N songs or minutes
 - **Song announcements** with natural-sounding AI voices (Microsoft neural voices) or the built-in Windows voices
 - **Jingle maker**: type a line, pick a voice and a music bed, and it saves a station ID
+- **Type-to-talk**: type a line, press Enter, and it's spoken on air in any voice
 
 ### Everything else
 - **Record your show** to MP3 (everything going out through the cable)
 - **Mini mode**: a small always-on-top remote with your favourite pads
-- Dark and light themes, multi-monitor aware
+- **Themes**: light, dark or **AMOLED black**, any accent colour, normal or compact spacing
+- **Your layout**: right-click any section for its settings or to hide it; every hotkey in one **Hotkeys…** window, or right-click a button to set its own
+- **System tray** icon with quick controls, and an option to keep running in the tray when you close the window
 - **Sounds folder**: drop files in and they appear on the board. Added sounds are copied there, so the setup is portable
 - **Backup**: export your whole setup (sounds, playlists, hotkeys, art, settings) to one zip and import it on another PC
-- One standalone exe that sets itself up in whatever folder you run it from
+- An **installer** (shortcuts, start with Windows, uninstall from Windows Settings), or one standalone exe that sets itself up in whatever folder you run it from
+- **Automatic updates** for the app and the YouTube downloader
 
 ---
 
@@ -65,9 +72,19 @@
 - **Windows 11** (or Windows 10 build 20348+) for *browser audio → cable* and the visualizer. Everything else works on older Windows 10.
 - An internet connection for the built-in browser, the YouTube downloader and the natural AI voices
 
-No Python or anything else to install. It's all inside the exe.
+No Python or anything else to install. It's all inside the app.
 
 ## Install
+
+### Option A: installer (recommended)
+
+1. Download **`Dick-Johnson-Radio-Setup.zip`** from the [latest release](https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest) (about 110 MB).
+2. Unzip it and run **`Dick-Johnson-Radio-Setup.exe`**.
+3. Pick the options you want: Start Menu shortcut, Desktop shortcut, start with Windows. It installs for your Windows account only, with no admin rights needed.
+
+Uninstall it any time from **Settings → Apps → Installed apps**. You choose whether your settings and sounds are kept.
+
+### Option B: just the exe (no install)
 
 1. Download **`Dick-Johnson-Radio.exe`** from the [latest release](https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest) (about 90 MB).
 2. Put it in a folder you can write to, for example `Documents\Dick Johnson Radio`. Not `Program Files`.
@@ -75,11 +92,11 @@ No Python or anything else to install. It's all inside the exe.
 
 **Windows SmartScreen** may say *"Windows protected your PC"* because the app isn't code-signed. Click **More info → Run anyway**. You can check your download against the SHA-256 checksum in the release notes.
 
-Everything the app saves lives next to the exe, so you can move or copy that whole folder to another PC.
+Either way, everything the app saves lives in its own folder, so you can move or copy that folder to another PC.
 
 ## Updates
 
-From version 1.1, the app updates itself. It checks once a day, or when you click **Check for updates** at the bottom of the window. When a new version is out, that button becomes **Update to x.y**. The download is checked against GitHub's published checksum, and it installs on restart or when you close the app. Your settings, sounds and logins are kept.
+From version 1.1, the app updates itself, whether it was installed or run as a plain exe. It checks once a day, or when you click **Check for updates** at the bottom of the window. When a new version is out, that button becomes **Update to x.y**. The download is checked against GitHub's published checksum, and it installs on restart or when you close the app. Your settings, sounds and logins are kept.
 
 On 1.0? Download the latest exe once by hand and put it in place of the old one. After that, updates are automatic.
 
