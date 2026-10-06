@@ -77,6 +77,12 @@ No Python or anything else to install. It's all inside the exe.
 
 Everything the app saves lives next to the exe, so you can move or copy that whole folder to another PC.
 
+## Updates
+
+From version 1.1, the app updates itself. It checks once a day, or when you click **Check for updates** at the bottom of the window. When a new version is out, that button becomes **Update to x.y**. The download is checked against GitHub's published checksum, and it installs on restart or when you close the app. Your settings, sounds and logins are kept.
+
+On 1.0? Download the latest exe once by hand and put it in place of the old one. After that, updates are automatic.
+
 ## First-time setup
 
 1. **Send sounds to:** pick **CABLE Input (VB-Audio Virtual Cable)**. In Discord, OBS or similar, set your microphone to **CABLE Output**.
