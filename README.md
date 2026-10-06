@@ -57,6 +57,8 @@
 - **Themes**: light, dark or **AMOLED black**, any accent colour, normal or compact spacing
 - **Your layout**: right-click any section for its settings or to hide it; every hotkey in one **Hotkeys…** window, or right-click a button to set its own
 - **System tray** icon with quick controls, and an option to keep running in the tray when you close the window
+- **Phone remote**: control the show from your phone's browser over your Wi-Fi (pads, now playing, mic, hold to talk, type-to-talk, recording, boost). Scan a QR code, PIN-protected, home network only
+- **Cable boost** up to +18 dB with a limiter, and per-source sliders up to 800%, so the browser can be quiet on your speakers but loud on the cable
 - **Sounds folder**: drop files in and they appear on the board. Added sounds are copied there, so the setup is portable
 - **Backup**: export your whole setup (sounds, playlists, hotkeys, art, settings) to one zip and import it on another PC
 - An **installer** (shortcuts, start with Windows, uninstall from Windows Settings), or one standalone exe that sets itself up in whatever folder you run it from
@@ -93,6 +95,10 @@ Uninstall it any time from **Settings → Apps → Installed apps**. You choose 
 **Windows SmartScreen** may say *"Windows protected your PC"* because the app isn't code-signed. Click **More info → Run anyway**. You can check your download against the SHA-256 checksum in the release notes.
 
 Either way, everything the app saves lives in its own folder, so you can move or copy that folder to another PC.
+
+## Phone remote
+
+Click **Phone** at the bottom of the window and switch it on. Scan the QR code with your phone's camera (the phone must be on the same Wi-Fi as the PC), or open the address shown in the phone's browser and enter the PIN. The first time, Windows asks whether to allow the app on private networks: click **Allow**. **New PIN** cuts off every phone that's connected. It's only reachable on your own network, never from the internet, and it's off until you switch it on.
 
 ## Updates
 
