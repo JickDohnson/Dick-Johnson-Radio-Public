@@ -14,6 +14,24 @@
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/main-window.png" alt="Main window: soundboard, on-air controls and the built-in YouTube Music browser (AMOLED theme)">
+  <br><sub>Soundboard, on-air controls and the built-in YouTube Music browser (AMOLED theme)</sub>
+</p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/pad-view.png" alt="Pad view"><br><sub>Pad view: big colour pads, click to play</sub></td>
+    <td width="50%"><img src="screenshots/light-theme.png" alt="Light theme"><br><sub>Light theme</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/mini-mode.png" alt="Mini mode"><br><sub>Mini mode: a small always-on-top remote</sub></td>
+    <td align="center"><img src="screenshots/phone-remote.png" alt="Phone remote pairing"><br><sub>Phone remote: scan the QR code to control the show from your phone</sub></td>
+  </tr>
+</table>
+
 ## Features
 
 ### Soundboard
