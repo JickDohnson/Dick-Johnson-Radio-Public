@@ -81,7 +81,7 @@
 - **Modern look**: a sidebar with Soundboard, On air, Show and Settings pages; light, dark or **AMOLED black** themes with any accent colour, and a size setting (90 to 125%)
 - **Your layout**: show or hide any feature (Settings, or right-click a card's title); every hotkey in one **Hotkeys** window, or right-click a button to set its own
 - **System tray** icon with quick controls, and an option to keep running in the tray when you close the window
-- **Phone remote**: control the show from your phone's browser over your Wi-Fi (pads, now playing, mic, hold to talk, type-to-talk, recording, boost). Scan a QR code, PIN-protected, home network only
+- **Phone remote**: run the show from your phone's browser over your Wi-Fi, in the app's own look: pads and playlists, now playing, mic, volumes, voice effects, hold to talk, Game PTT, the queue, station IDs, type-to-talk and recording. Choose what it shows from its **Customize** button. Scan a QR code, PIN-protected, home network only
 - **Cable boost** up to +18 dB with a limiter, and per-source sliders up to 800%, so the browser can be quiet on your speakers but loud on the cable
 - **Sounds folder**: drop files in and they appear on the board. Added sounds are copied there, so the setup is portable
 - **Backup**: export your whole setup (sounds, playlists, hotkeys, art, settings) to one zip and import it on another PC
@@ -122,7 +122,9 @@ Either way, everything the app saves lives in its own folder, so you can move or
 
 ## Phone remote
 
-Click **Phone** at the bottom of the sidebar and switch it on. Scan the QR code with your phone's camera (the phone must be on the same Wi-Fi as the PC), or open the address shown in the phone's browser and enter the PIN. The first time, Windows asks whether to allow the app on private networks: click **Allow**. **New PIN** cuts off every phone that's connected. It's only reachable on your own network, never from the internet, and it's off until you switch it on.
+Click **Phone** at the bottom of the sidebar and switch it on. Scan the QR code with your phone's camera (the phone must be on the same Wi-Fi as the PC), or open the address shown in the phone's browser and enter the PIN. The first time, Windows asks whether to allow the app on private networks: click **Allow**. **New PIN** cuts off every phone that's connected.
+
+The phone page has **Sounds**, **On air** and **Show** tabs, like the app. Tap a pad to play it, hold it to queue it for the next song break. The **Customize** button (top right) shows or hides any card, button or page, and sets the theme, pad size, start page and what a tap does. The layout is saved on the PC, so every phone gets it. It's only reachable on your own network, never from the internet, and it's off until you switch it on.
 
 ## Updates
 
