@@ -17,14 +17,18 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/main-window.png" alt="Main window: soundboard, on-air controls and the built-in YouTube Music browser (AMOLED theme)">
-  <br><sub>Soundboard, on-air controls and the built-in YouTube Music browser (AMOLED theme)</sub>
+  <img src="screenshots/main-window.png" alt="The Soundboard page: colour pads, now playing, the on-air meter and the built-in YouTube Music browser">
+  <br><sub>The Soundboard page, with now playing, the on-air meter and the built-in YouTube Music browser</sub>
 </p>
 
 <table>
   <tr>
-    <td width="50%"><img src="screenshots/pad-view.png" alt="Pad view"><br><sub>Pad view: big colour pads, click to play</sub></td>
-    <td width="50%"><img src="screenshots/light-theme.png" alt="Light theme"><br><sub>Light theme</sub></td>
+    <td width="50%"><img src="screenshots/on-air.png" alt="On air page"><br><sub><b>On air</b>: cable output and boost, speakers, mic, voice effects, talk and Game PTT</sub></td>
+    <td width="50%"><img src="screenshots/show.png" alt="Show page"><br><sub><b>Show</b>: between-songs queue, station IDs, announcements, type-to-talk</sub></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/light-theme.png" alt="Light theme"><br><sub>Light theme, list view with waveforms</sub></td>
+    <td><img src="screenshots/settings.png" alt="Settings page"><br><sub><b>Settings</b>: theme, accent colour, size, and which features are shown (AMOLED black theme)</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="screenshots/mini-mode.png" alt="Mini mode"><br><sub>Mini mode: a small always-on-top remote</sub></td>
@@ -74,8 +78,8 @@
 ### Everything else
 - **Record your show** to MP3 (everything going out through the cable)
 - **Mini mode**: a small always-on-top remote with your favourite pads
-- **Themes**: light, dark or **AMOLED black**, any accent colour, normal or compact spacing
-- **Your layout**: right-click any section for its settings or to hide it; every hotkey in one **Hotkeys…** window, or right-click a button to set its own
+- **Modern look**: a sidebar with Soundboard, On air, Show and Settings pages; light, dark or **AMOLED black** themes with any accent colour, and a size setting (90 to 125%)
+- **Your layout**: show or hide any feature (Settings, or right-click a card's title); every hotkey in one **Hotkeys** window, or right-click a button to set its own
 - **System tray** icon with quick controls, and an option to keep running in the tray when you close the window
 - **Phone remote**: control the show from your phone's browser over your Wi-Fi (pads, now playing, mic, hold to talk, type-to-talk, recording, boost). Scan a QR code, PIN-protected, home network only
 - **Cable boost** up to +18 dB with a limiter, and per-source sliders up to 800%, so the browser can be quiet on your speakers but loud on the cable
@@ -98,7 +102,7 @@ No Python or anything else to install. It's all inside the app.
 
 ## Install
 
-### Option A: installer (recommended)
+### Option 1: installer (recommended)
 
 1. Download **`Dick-Johnson-Radio-Setup.zip`** from the [latest release](https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest) (about 110 MB).
 2. Unzip it and run **`Dick-Johnson-Radio-Setup.exe`**.
@@ -106,9 +110,9 @@ No Python or anything else to install. It's all inside the app.
 
 Uninstall it any time from **Settings → Apps → Installed apps**. You choose whether your settings and sounds are kept.
 
-### Option B: just the exe (no install)
+### Option 2: just the exe (no install)
 
-1. Download **`Dick-Johnson-Radio.exe`** from the [latest release](https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest) (about 90 MB).
+1. Download **`Dick-Johnson-Radio.exe`** from the [latest release](https://github.com/JickDohnson/Dick-Johnson-Radio-Public/releases/latest) (about 95 MB).
 2. Put it in a folder you can write to, for example `Documents\Dick Johnson Radio`. Not `Program Files`.
 3. Double-click it. The first launch takes about 20 seconds while it sets up the folder (settings, browser data, ad blocker).
 
@@ -118,21 +122,21 @@ Either way, everything the app saves lives in its own folder, so you can move or
 
 ## Phone remote
 
-Click **Phone** at the bottom of the window and switch it on. Scan the QR code with your phone's camera (the phone must be on the same Wi-Fi as the PC), or open the address shown in the phone's browser and enter the PIN. The first time, Windows asks whether to allow the app on private networks: click **Allow**. **New PIN** cuts off every phone that's connected. It's only reachable on your own network, never from the internet, and it's off until you switch it on.
+Click **Phone** at the bottom of the sidebar and switch it on. Scan the QR code with your phone's camera (the phone must be on the same Wi-Fi as the PC), or open the address shown in the phone's browser and enter the PIN. The first time, Windows asks whether to allow the app on private networks: click **Allow**. **New PIN** cuts off every phone that's connected. It's only reachable on your own network, never from the internet, and it's off until you switch it on.
 
 ## Updates
 
-From version 1.1, the app updates itself, whether it was installed or run as a plain exe. It checks once a day, or when you click **Check for updates** at the bottom of the window. When a new version is out, that button becomes **Update to x.y**. The download is checked against GitHub's published checksum, and it installs on restart or when you close the app. Your settings, sounds and logins are kept.
+From version 1.1, the app updates itself, whether it was installed or run as a plain exe. It checks once a day, or when you click **Check for updates** at the bottom of the sidebar. When a new version is out, that button becomes **Update to x.y**. The download is checked against GitHub's published checksum, and it installs on restart or when you close the app. Your settings, sounds and logins are kept.
 
 On 1.0? Download the latest exe once by hand and put it in place of the old one. After that, updates are automatic.
 
 ## First-time setup
 
-1. **Send sounds to:** pick **CABLE Input (VB-Audio Virtual Cable)**. In Discord, OBS or similar, set your microphone to **CABLE Output**.
-2. **Also play on:** tick this and pick your speakers or headphones so you hear the sounds too.
-3. **Microphone:** tick it to send your real mic through the cable as well, with optional effects.
-4. **Browser audio:** tick it to send YouTube Music / Spotify through the cable.
-5. Add sounds with **Add files…**, **Add folder…**, **YouTube…**, or by dropping files into the `sounds` folder.
+1. Open the **On air** page. Under **Output to the cable**, set **Send to** to **CABLE Input (VB-Audio Virtual Cable)**. In Discord, OBS or similar, set your microphone to **CABLE Output**.
+2. **Also play on your speakers:** switch it on and pick your speakers or headphones so you hear the sounds too.
+3. **Microphone:** switch on **Mic into the cable** to send your real mic through the cable as well, with optional voice effects.
+4. **Browser audio:** switch it on to send YouTube Music / Spotify through the cable.
+5. On the **Soundboard** page, add sounds with **Add files…**, **Add folder…**, **YouTube…**, or by dropping files into the `sounds` folder.
 6. Select a sound and click **Set hotkey…**. Press a key combo or a controller button.
 
 Tips: right-click a hotkey button to clear it, right-click the visualizer to change its style or picture, and right-click sounds for favourites, colours and playlists.
@@ -145,7 +149,7 @@ Run the built-in check from a Command Prompt in the app's folder:
 "Dick-Johnson-Radio.exe" --selftest
 ```
 
-This writes `selftest.txt` next to the exe, with OK/FAIL for audio devices, MP3 support, media controls, browser audio capture, the built-in browser, speech, controllers, the YouTube downloader and the bundled files.
+This writes `selftest.txt` next to the exe, with OK/FAIL for audio devices, MP3 support, media controls, the YouTube downloader, the natural voices, the update feed, the phone remote, browser audio capture, the built-in browser, speech, controllers, the icons and the bundled files.
 
 ## Credits
 
@@ -154,6 +158,7 @@ Dick Johnson Radio bundles these open-source projects, unmodified:
 - [uBlock Origin](https://github.com/gorhill/uBlock) by Raymond Hill (GPLv3)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) (Unlicense) and [FFmpeg](https://ffmpeg.org/) ([source](https://github.com/FFmpeg/FFmpeg), GPL build via [imageio-ffmpeg](https://github.com/imageio/imageio-ffmpeg))
 - [edge-tts](https://github.com/rany2/edge-tts) for the natural voices
+- [CustomTkinter](https://customtkinter.tomschimansky.com/) for the window
 - [Python](https://www.python.org/), [sounddevice](https://python-sounddevice.readthedocs.io/), [soundfile](https://python-soundfile.readthedocs.io/), [pythonnet](https://pythonnet.github.io/) + Microsoft Edge WebView2, [keyboard](https://github.com/boppreh/keyboard), [hidapi](https://github.com/trezor/cython-hidapi), [Pillow](https://python-pillow.org/), NumPy, comtypes, PyWinRT
 
 Only download and broadcast audio you have the rights to use.
