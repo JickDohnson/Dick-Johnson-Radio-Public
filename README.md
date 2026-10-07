@@ -34,6 +34,9 @@
     <td align="center"><img src="screenshots/mini-mode.png" alt="Mini mode"><br><sub>Mini mode: a small always-on-top remote</sub></td>
     <td align="center"><img src="screenshots/phone-remote.png" alt="Phone remote pairing"><br><sub>Phone remote: scan the QR code to control the show from your phone</sub></td>
   </tr>
+  <tr>
+    <td colspan="2" align="center"><img src="screenshots/phone-page.png" alt="The phone remote's Sounds, On air and Show tabs"><br><sub>The phone remote: Sounds, On air and Show tabs, in the app's own look. Its <b>Customize</b> button picks what it shows.</sub></td>
+  </tr>
 </table>
 
 ## Features
