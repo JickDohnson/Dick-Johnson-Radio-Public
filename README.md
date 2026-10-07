@@ -68,7 +68,7 @@
 - **Hold-to-talk / talk-over** button or hotkey: mic on, music ducked
 - **Game push-to-talk**: one click (or a hotkey) holds your game's talk key down for you, and again lets go. Any key or mouse button 4/5, and it can hold the key automatically while sounds play
 - **Auto-ducking**: music dips while you talk or a clip plays
-- **On-air loudness meter** with peak and clip warning
+- **On-air loudness meter** with peak and clip warning, plus a **mic meter** (it still shows your mic while muted, in grey)
 - **Countdown to the vocals**: mark where the singing starts and get a countdown to talk over the intro (auto-estimated for downloaded songs)
 
 ### Between songs
