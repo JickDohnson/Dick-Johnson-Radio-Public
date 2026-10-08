@@ -1,0 +1,31 @@
+# Posts each new release, with its notes and download links, to a Discord channel.
+# Needs a repository secret named DISCORD_WEBHOOK holding the channel's webhook URL
+# (Discord: channel settings > Integrations > Webhooks > New Webhook > Copy Webhook URL).
+name: Announce release on Discord
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:  # post (or re-post) a release by hand: Actions > this workflow > Run workflow
+    inputs:
+      tag:
+        description: "Release tag to post, e.g. v1.5.2 (leave empty for the latest release)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - name: Post to Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.inputs.tag }}
+        run: python3 .github/scripts/discord_release.py
