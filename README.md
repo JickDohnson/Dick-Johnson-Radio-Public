@@ -23,12 +23,16 @@
 
 <table>
   <tr>
-    <td width="50%"><img src="screenshots/on-air.png" alt="On air page"><br><sub><b>On air</b>: cable output and boost, speakers, mic, voice effects, talk and Game PTT</sub></td>
+    <td width="50%"><img src="screenshots/on-air.png" alt="On air page"><br><sub><b>On air</b>: cable output and boost (and <b>Hear it</b>: listen live or a 10-second test), speakers, mic, voice effects, talk and Game PTT</sub></td>
     <td width="50%"><img src="screenshots/show.png" alt="Show page"><br><sub><b>Show</b>: between-songs queue, station IDs, announcements, type-to-talk</sub></td>
   </tr>
   <tr>
     <td><img src="screenshots/light-theme.png" alt="Light theme"><br><sub>Light theme, list view with waveforms</sub></td>
     <td><img src="screenshots/settings.png" alt="Settings page"><br><sub><b>Settings</b>: theme, accent colour, size, and which features are shown (AMOLED black theme)</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/custom-tab.png" alt="A custom tab"><br><sub><b>Your own tabs</b>: just the tools you pick, in your order (here the soundboard, cable output, mic and talk)</sub></td>
+    <td width="50%" align="center"><img src="screenshots/tab-editor.png" alt="The tab editor"><br><sub><b>Edit tab</b>: add, remove and reorder a tab's tools</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="screenshots/mini-mode.png" alt="Mini mode"><br><sub>Mini mode: a small always-on-top remote</sub></td>
@@ -53,7 +57,7 @@
 - **Playlists** as tabs, with loop, shuffle, skip and their own hotkeys
 
 ### Music & media
-- **Built-in browser** with tabs for YouTube Music and Spotify; logins are remembered
+- **Built-in browser** with tabs for YouTube Music, YouTube and Spotify, plus **your own tabs** for any site (the **+** at the end of the tabs; right-click one to rename or remove it); logins are remembered
 - **uBlock Origin** ad blocking built in (or uBlock Origin Lite)
 - Media controls for the built-in browser: play/pause, next, previous and a **seek bar**
 - **Album art** in the now-playing area
@@ -83,9 +87,11 @@
 - **Mini mode**: a small always-on-top remote with your favourite pads
 - **Modern look**: a sidebar with Soundboard, On air, Show and Settings pages; light, dark or **AMOLED black** themes with any accent colour, and a size setting (90 to 125%)
 - **Your layout**: show or hide any feature (Settings, or right-click a card's title); every hotkey in one **Hotkeys** window, or right-click a button to set its own
+- **Your own tabs**: **New tab** in the sidebar makes a tab with just the tools you pick (the soundboard, cable output, speakers, mic, voice effects, talk, auto-duck, recording, the queue, station IDs, announcements, type-to-talk), in your order. **Edit tab** adds, removes and reorders them; right-click a tab in the sidebar to move it up or down
 - **System tray** icon with quick controls, and an option to keep running in the tray when you close the window
 - **Phone remote**: run the show from your phone's browser over your Wi-Fi, in the app's own look: pads and playlists, now playing, mic, volumes, voice effects, hold to talk, Game PTT, the queue, station IDs, type-to-talk and recording. Choose what it shows from its **Customize** button. Scan a QR code, PIN-protected, home network only
 - **Cable boost** up to +18 dB with a limiter, and per-source sliders up to 800%, so the browser can be quiet on your speakers but loud on the cable
+- **Hear what you send**: **Listen live** plays exactly what goes into the cable (mic, music, clips, boost) on your headphones, and **Test 10 s** records 10 seconds of it and plays it back, so you can set your volumes
 - **Sounds folder**: drop files in and they appear on the board. Added sounds are copied there, so the setup is portable
 - **Backup**: export your whole setup (sounds, playlists, hotkeys, art, settings) to one zip and import it on another PC
 - An **installer** (shortcuts, start with Windows, uninstall from Windows Settings), or one standalone exe that sets itself up in whatever folder you run it from
