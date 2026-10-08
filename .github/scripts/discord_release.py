@@ -35,6 +35,15 @@ def the_release():
     return github(f"/releases/tags/{tag}") if tag else github("/releases/latest")
 
 
+def logo_url():
+    """The logo's address, tagged with its file version: Discord keeps the picture it first fetched for an
+    address, so a new logo needs a new address (the same logo keeps the same one, and Discord's copy)."""
+    try:
+        return LOGO + "?v=" + github("/contents/logo.png")["sha"][:12]
+    except Exception:  # noqa: BLE001
+        return LOGO
+
+
 def discord_markdown(body):
     """GitHub release notes, tidied for a Discord embed."""
     body = (body or "").replace("\r\n", "\n")
@@ -66,8 +75,9 @@ def main():
     notes = discord_markdown(rel.get("body"))
     if len(notes) > MAX_NOTES:
         notes = notes[:MAX_NOTES].rsplit("\n", 1)[0] + f"\n…\n[Read the full notes]({url})"
+    logo = logo_url()
     embed = {"title": f"{name} is out", "url": url, "description": notes or f"[See what's new]({url})",
-             "color": COLOR, "thumbnail": {"url": LOGO}, "timestamp": rel.get("published_at")}
+             "color": COLOR, "thumbnail": {"url": logo}, "timestamp": rel.get("published_at")}
     assets = [a for a in rel.get("assets", []) if a.get("state", "uploaded") == "uploaded"]
     if assets:
         order = {".zip": 0, ".exe": 1}
@@ -80,7 +90,7 @@ def main():
                          + (f" · {what}" if what else ""))
         embed["fields"] = [{"name": "Download", "value": "\n".join(lines)[:1024]}]
     embed["footer"] = {"text": "Already on 1.1 or later? The app offers this update by itself."}
-    payload = {"username": "Dick Johnson Radio", "avatar_url": LOGO, "embeds": [embed],
+    payload = {"username": "Dick Johnson Radio", "avatar_url": logo, "embeds": [embed],
                "allowed_mentions": {"parse": []}}  # (notes never ping @everyone or anyone else)
     failed = 0
     for n, hook in enumerate(hooks, 1):  # (one channel failing doesn't stop the others)
