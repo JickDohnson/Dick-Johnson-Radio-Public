@@ -52,8 +52,9 @@ def size_text(n):
 
 
 def main():
-    hook = os.environ.get("DISCORD_WEBHOOK", "").strip()
-    if not hook:
+    # one webhook URL per channel: the secret can hold several, one per line (or separated by spaces or commas)
+    hooks = [h for h in re.split(r"[\s,]+", os.environ.get("DISCORD_WEBHOOK", "")) if h.startswith("http")]
+    if not hooks:
         sys.exit("No DISCORD_WEBHOOK secret: add the channel's webhook URL in the repo's "
                  "Settings > Secrets and variables > Actions.")
     rel = the_release()
@@ -81,15 +82,24 @@ def main():
     embed["footer"] = {"text": "Already on 1.1 or later? The app offers this update by itself."}
     payload = {"username": "Dick Johnson Radio", "avatar_url": LOGO, "embeds": [embed],
                "allowed_mentions": {"parse": []}}  # (notes never ping @everyone or anyone else)
-    req = urllib.request.Request(hook, data=json.dumps(payload).encode("utf-8"), method="POST",
-                                 headers={"Content-Type": "application/json",
-                                          # (Discord's firewall turns away Python's default user agent)
-                                          "User-Agent": "DiscordBot (https://github.com/JickDohnson, 1.0)"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            print(f"Posted {name} to Discord ({r.status}).")
-    except urllib.error.HTTPError as e:
-        sys.exit(f"Discord said {e.code}: {e.read().decode('utf-8', 'replace')[:500]}")
+    failed = 0
+    for n, hook in enumerate(hooks, 1):  # (one channel failing doesn't stop the others)
+        req = urllib.request.Request(hook, data=json.dumps(payload).encode("utf-8"), method="POST",
+                                     headers={"Content-Type": "application/json",
+                                              # (Discord's firewall turns away Python's default user agent)
+                                              "User-Agent": "DiscordBot (https://github.com/JickDohnson, 1.0)"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                print(f"Posted {name} to Discord channel {n} of {len(hooks)} ({r.status}).")
+        except urllib.error.HTTPError as e:
+            failed += 1
+            print(f"Channel {n} of {len(hooks)}: Discord said {e.code}: "
+                  f"{e.read().decode('utf-8', 'replace')[:500]}")
+        except urllib.error.URLError as e:
+            failed += 1
+            print(f"Channel {n} of {len(hooks)}: couldn't reach Discord: {e.reason}")
+    if failed:
+        sys.exit(f"{failed} of {len(hooks)} channel(s) didn't get the post.")
 
 
 if __name__ == "__main__":
